@@ -13,11 +13,36 @@ body {
     margin-left: 1%;
 }
 
+h1,#wins-losses,.score,#your-score,#random-number,#game-instructions {
+    background-color: rgba(0,191,255,0.4);
+    display: inline-block;
+    font-family: 'Roboto',sans-serif;
+    margin: 1%;
+    padding: 1%;
+}
+
 h1 {
     font-family: 'Bungee Inline',cursive;
     font-size: 300%;
+    margin: 1% 0 0;
+    padding: 1%;
 }
 
 #game-instructions {
-    font-family: 'Roboto',sans-serif;
+    max-width: 40%;
+    padding: 1%;
+}
+
+#wins-losses {
+    margin-top: 0;
+}
+
+#random-number {
+    margin: 0 5% 0 0;
+    padding: 2.35%;
+}
+
+#your-score {
+    margin: 0 1% 1%;
+    padding: 1%;
 }
