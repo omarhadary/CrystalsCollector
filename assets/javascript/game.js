@@ -1,8 +1,5 @@
 $(document).ready(function() {
-    // --------------variables for loop option-----------------
-    var crystal;
-    var resultCrystal;
-    var crystalValue = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+    // --------------global variables-------------
     var colors = ["red", "yellow", "purple", "green"];
     var randomValue = [];
     var randomNumber = 0;
@@ -14,14 +11,14 @@ $(document).ready(function() {
     var yellowCrystal;
     var redCrystal;
     startGame();
-
+    // -----------reset game----------------
     function reset() {
             $('.crystals').text("");
             yourScore = 0;
             $('#your-score').text(0);
             startGame();
         }
-        // assign random numbers at start of game
+        // --------assign random numbers at start of game---------
 
     function startGame() {
             randomNumber = Math.floor((Math.random() * 120) + 19);
@@ -56,64 +53,25 @@ $(document).ready(function() {
             redCrystal.attr('class', 'images');
             $('.crystals').append(redCrystal);
             playGame();
-            // ----------------------loop option----------------
-            // for (var i = 0; i < colors.length; i++) {
-            // var resultCrystal = eval("colors[i]"+crystal);
-            // console.log(resultCrystal);
-            // resultCrystal = $('<img>');
-            // resultCrystal.attr('data-num', colors[i]+RandomValue);
-            // resultCrystal.attr('src', './assets/images/'+colors[i]+'.jpg');
-            // resultCrystal.attr('alt', ''+colors[i]+' Crystal');
-            // resultCrystal.attr('class', 'images');
-            // $('.crystals').append(resultCrystal);
-            // }
-            // playGame();
-            // ----------------------loop option 2----------------
-            // for (var i = 0; i < randomValue.length; i++) {
-            // var Crystal = $('<img>');
-            // imageCrystal.attr('data-num', numbers[i]);
-            // imageCrystal.attr('src', './assets/images/??????.jpg');
-            // imageCrystal.attr('alt', 'crystals');
-            // $('.crystals').append(Crystal);
-            // }
-            // playGame();
         }
-        // when one of the crystals is clicked, add value of crystal to user score
-        // if user score is greater than random number then add 1 to losses and restart game
-        // if user score equals random number then add 1 to wins and reset game
+        // ---------------process user input-----------------
 
     function playGame() {
-            $('.images').on('click', function() {
-                yourScore = yourScore + parseInt($(this).data(
-                    'num'));
-                $('#your-score').text(yourScore);
-                if (yourScore == randomNumber) {
-                    wins++;
-                    $('#wins').html("Wins: " + wins);
-                    $('#result-announced').html('You won!!!!');
-                    reset();
-                } else if (yourScore > randomNumber) {
-                    losses++;
-                    $('#losses').html("Losses: " + losses);
-                    $('#result-announced').html('You lost!');
-                    reset();
-                }
-            });
-        }
-        // ----------------test scenario--------------
-        // $('.crystals').on('click', function() {
-        //     yourScore++;
-        //     $('#your-score').text(yourScore);
-        //     if (yourScore == 3) {
-        //         wins++;
-        //         $('#wins').html("Wins: " + wins);
-        //         $('#result-announced').html('You won!!!!');
-        //         reset();
-        //     } else if (yourScore > 5) {
-        //         losses++;
-        //         $('#losses').html("Losses: " + losses);
-        //         $('#result-announced').html('You lost!');
-        //         reset();
-        //     }
-        // });
+        $('.images').on('click', function() {
+            yourScore = yourScore + parseInt($(this).data(
+                'num'));
+            $('#your-score').text(yourScore);
+            if (yourScore == randomNumber) {
+                wins++;
+                $('#wins').html("Wins: " + wins);
+                $('#result-announced').html('You won!!!!');
+                reset();
+            } else if (yourScore > randomNumber) {
+                losses++;
+                $('#losses').html("Losses: " + losses);
+                $('#result-announced').html('You lost!');
+                reset();
+            }
+        });
+    }
 });
