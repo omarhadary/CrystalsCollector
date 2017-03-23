@@ -1,6 +1,6 @@
 # Crystals Collector
 
-![N|Solid](https://s-media-cache-ak0.pinimg.com/originals/ee/51/9a/ee519ae79f01778ec519e29e7b21b3fd.jpg)
+![N|Solid](https://s-media-cache-ak0.pinimg.com/236x/f7/5d/70/f75d7061f115e94c582d37b2d6c63f21.jpg)
 
 Crystals Collector is an interactive web browser game. The app dynamically updates HTML pages with the jQuery library.
 
