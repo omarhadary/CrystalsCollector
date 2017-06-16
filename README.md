@@ -4,7 +4,7 @@
 
 Crystals Collector is an interactive web browser game. The app dynamically updates HTML pages with the jQuery library.
 
-  - Leverages JQuery Liabrary
+  - Leverages JQuery Library
   - Utilizes Bootstrap Framework
   - Google Fonts for customizing
 
